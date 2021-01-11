@@ -34,6 +34,3 @@ public class Example1Short {
         System.out.println("The area of the circle is: " +area); 
         }
     }
-  
-    
-
