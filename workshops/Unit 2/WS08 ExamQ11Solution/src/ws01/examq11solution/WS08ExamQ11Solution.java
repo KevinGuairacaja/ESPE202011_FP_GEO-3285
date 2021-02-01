@@ -9,7 +9,7 @@ public class WS08ExamQ11Solution {
         int multiplier=1;
         int product;
         int stop=12;
-        
+                                
         product=0;
         
         do{
