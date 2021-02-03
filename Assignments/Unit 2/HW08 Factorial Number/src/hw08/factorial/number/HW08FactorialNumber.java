@@ -30,7 +30,7 @@ public class HW08FactorialNumber {
             System.out.println("Press 0 to exit --> ");
             numero=input.nextInt();
             
-            for(int i = numero; i > 0 ; i--){
+            for(int i = numero; i > 15 ; i--){
                       factorial=factorial*i;              
 
                     }                    
