@@ -5,55 +5,63 @@
  */
 package hw10.functions;
 
-/**
- *
- * @author KEVIN
- */
+import java.util.Scanner;
+
 public class HW10Functions {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
         System.out.println("======== Kevin Andres Guairacaja =======");
-            int divd=5;
-            int divr=10;
+        Scanner e = new Scanner(System.in);
+            System.out.println("Enter the First Value");
+            int scanner1 = e.nextInt();
+
+            System.out.println("Enter the Second Value");
+            int scanner2 = e.nextInt();
+
+            int dividend=scanner1;
+            int divisor=scanner2;
             float quotient=0;
-            int x = 0;
-            int y = 0;
-            int g = 0;
+            int variableX = 0;
+            int variableY = 0;
+            int variableG = 0;
             int multiply = 0;
 
 
-            quotient = divideTwoNumbers(divd,divr);
+            quotient = divideTwoNumbers(dividend,divisor);
             System.out.println("================ Quotient ==============");
-            System.out.println("Quotient of 5 and 10 is -> "+quotient);
+            System.out.println("Quotient of " +scanner1+ " and " +scanner2+ " is -> "+quotient);
 
             System.out.println("\n================ F(x)= x^2 =============");
-            y = f(3);
-            System.out.println("If x=3 equals to -> "+y);
+            variableY = computeSquare(scanner1);
+            System.out.println("If x="+scanner1+" equals to -> "+variableY);
             
             System.out.println("\n================ F(x)= x^2 =============");
-            y = f(-3);
-            System.out.println("If x=-3 equals to -> "+y);
+            variableY = computeSquare(scanner2);
+            System.out.println("If x="+scanner2+" equals to -> "+variableY);
 
             System.out.println("\n================ F(x)= x^2 =============");
-            x = -1;
-            y = f(x);
-            System.out.println("If x is " +x+ " Then F(x) is the same -> "+y);
+            variableX = scanner1;
+            variableY = computeSquare(scanner1);
+            System.out.println("If x is " +variableX+ " Then F(x) is the same -> "+variableY);
 
-            x = -19;
-            g = g(x);
+            variableX = scanner2;
+            variableG = computeParabola(scanner2);
             System.out.println("\n============== G(x)=x^2+2x+1  ==========");
-            System.out.println("The Solution of the G(x)\nIf x takes the value of"
-                    +x+ "\n Is equal to -> "+g);
+            System.out.println("The Solution of the G(x)\nIf x takes the value of "
+                    +variableX+ "\nIs equal to -> "+variableG);
             
             System.out.println("\n================ Multiply ==============");
-            System.out.println("The multiplication table of 8 is:");
+            System.out.println("The multiplication table of " +scanner1+ " is:");
 
-            x = 8;
-            multiply = multiply(x);
+            variableX = scanner1;
+            multiply = showTheMultiplicationTable(variableX);
+            
+            System.out.println("\n============ Factorial Number ==========");
+            
+            int number = scanner2;
+            int fact = 0;
+            fact= factorialNumber(number);
+            System.out.println("The Factorial Number of " +number+ " is equal to " +fact);
             
 
       }
@@ -66,34 +74,44 @@ public class HW10Functions {
             return quotient;
         }
 
-        public static int f(int x){
+        public static int computeSquare(int x){
             int y=0;
             y=x*x;
             return y;
         }
 
-        public static int g(int x){
+        public static int computeParabola(int x){
             int y=0;
             y=x*x+2*x+1;
             return y;   
         }
         
-        public static int multiply(int x){
+        public static int showTheMultiplicationTable(int x){
             int y=0;        
             int top=10;
             int product=0;
-            int table = 8;
+            int table = x;
                         
                         
             for(int j=1 ; j <= top ; j++){
                 product = table * j;
-                System.out.println("8 * " + j + " = " + product);
+                System.out.println(table+ " * " + j + " = " + product);
 
             }
-        return 0;
-            
+        return 0;       
         }
-            
+        
+        public static int factorialNumber(int n){
+            if (n < 0){
+                return -1;
+            } else{        
+                if( n==0 ){
+                    return 1;
+            }else{
+            return( n * factorialNumber(n -1));
+            }
+            }        
+        }   
 }
         
 

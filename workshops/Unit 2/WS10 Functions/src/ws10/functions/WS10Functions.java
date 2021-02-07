@@ -3,7 +3,8 @@ package ws10.functions;
 public class WS10Functions {
 
     public static void main(String[] args) {
-
+        
+        
           int divd=5;
           int divr=10;
           float quotient=0;
