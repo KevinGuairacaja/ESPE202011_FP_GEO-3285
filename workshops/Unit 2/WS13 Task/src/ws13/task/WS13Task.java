@@ -8,18 +8,21 @@ public class WS13Task {
         System.out.println("================= Kevin Andres Guairacaja =================");
         System.out.println("==================== Physics Formula ======================");
         
+        System.out.println("Lets calculate the Period ");
         // T = 2pi/W
         calculatePeriod();
         
+        System.out.println("\nLets calculate the Final Velocity ");
         // Vf^2 = Vo^2+2ad
         calculateFinalVelocity();
         
+        System.out.println("\nLets calculate the Module of Aceleration ");
         // a^2 = an^2 + at^2
         // an = V^2/Ro
         calculateModuleofAceleration();
         System.out.println("\n================ Area of Geometric Figures ================");
-        System.out.println("Lets Calculate the Area of Cube");
         
+        System.out.println("Lets Calculate the Area of Cube");
         // A=6a^2
         calculateAreaOfCube();
         
@@ -34,16 +37,7 @@ public class WS13Task {
     }
 
     public static void calculateAreaOfCone() {
-        float radio;
-        float alturainclinada;
-        float area;
-        Scanner e = new Scanner(System.in);
-        System.out.println("Enter radius value -> ");
-        radio = e.nextFloat();                             
-        System.out.println("Enter the slant height value -> ");
-        alturainclinada = e.nextFloat(); 
-        area =(float) ((3.14*radio*radio)+(3.14*radio*alturainclinada));
-        System.out.println("The area is: \n" + area);
+        
     }
 
     public static void calculateAreaOfSphere() {
@@ -69,7 +63,6 @@ public class WS13Task {
 
     public static void calculateModuleofAceleration() {
         Scanner e = new Scanner(System.in);
-        System.out.println("\nLets calculate the Module of Aceleration ");
         System.out.println("Please enter the value of the Tangential Aceleration");
         float scanner1 = e.nextFloat();
         System.out.println("Lets calculate the Normal Aceleration ");
@@ -91,7 +84,6 @@ public class WS13Task {
 
     public static void calculateFinalVelocity() {
         Scanner e = new Scanner(System.in);
-        System.out.println("\nLets calculate the Final Velocity ");
         System.out.println("Please enter the value of the Initial Velocity");
         float scanner1 = e.nextFloat();
         System.out.println("Please enter the value of the Aceleration");
@@ -109,7 +101,6 @@ public class WS13Task {
 
     public static void calculatePeriod() {
         Scanner e = new Scanner(System.in);
-        System.out.println("Lets calculate the Period ");
         System.out.println("Please enter the value of the Angular Velocity");
         float scanner1 = e.nextFloat();
         float period = 0.0f;
@@ -117,7 +108,5 @@ public class WS13Task {
         period = (float) (2*Math.PI)/scanner1;
         System.out.println("The value to Period is: "+period);
     }
-    
-    
-    
+
 }
