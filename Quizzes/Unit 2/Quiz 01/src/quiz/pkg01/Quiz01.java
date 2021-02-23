@@ -29,7 +29,33 @@ public class Quiz01 {
         for (int i = 0; i < information; i++) {
             System.out.println("The porcentage of the Candidate is  " + (i + 1) + " -> " + porcentageCandidate[i]);
         }
+        System.out.println("==========================================================================");
+        System.out.println("============= Kevin Andres Guairacaja =============");
+        int totalOfCandidates=0;
+        String[] Candidates;
+        float[] porcentageOfCandidate;
         
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Please Enter the amount of Candidate you want to record: ");
+        totalOfCandidates = scanner.nextInt();
+        
+        Candidates = new String[totalOfCandidates];
+        porcentageOfCandidate = new float[totalOfCandidates];
+        
+        
+        for(int i = 0; i < totalOfCandidates; i++){
+            scanner.nextLine();
+            System.out.println("Please Enter the name of the Candidate: " + i );
+            Candidates[i]=scanner.nextLine();
+            System.out.println("Please Enter " +Candidates[i]+ " porcentage %: ");
+            porcentageOfCandidate[i] = scanner.nextFloat();
+        }
+        
+        for(int i = 0; i < totalOfCandidates; i++){
+            System.out.println(Candidates[i]+ " -> \t" +porcentageOfCandidate[i]);
+            
+        } 
     }
     
 }
