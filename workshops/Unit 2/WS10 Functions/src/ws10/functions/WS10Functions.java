@@ -4,7 +4,7 @@ public class WS10Functions {
 
     public static void main(String[] args) {
         
-        
+        System.out.println("========= Author: Kevin Andres Guairacaja =========");
           int divd=5;
           int divr=10;
           float quotient=0;
