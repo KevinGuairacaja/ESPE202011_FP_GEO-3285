@@ -1,0 +1,7 @@
+
+Kia Rio R, PSC1242, 4, 5, 14; 
+Nissan Sentra, PUH0908, 4, 5, 14; 
+Chevrolet Spark, PTA5687, 4, 5, 14; 
+Chevrolet Spark GT, PWE2344, 4, 5, 12; 
+Hyundai Tucson, PHB6578, 5, 5, 16; 
+Nissan Sentra V12, PUH1548, 4, 5, 14; 
