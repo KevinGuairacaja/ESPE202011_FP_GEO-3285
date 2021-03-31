@@ -8,6 +8,7 @@ package ec.edu.espe.concessionary.view;
 import ec.edu.espe.concessionary.controller.CarController;
 import ec.edu.espe.concessionary.model.Car;
 import javax.swing.JOptionPane;
+import utils.FileManager;
 
 /**
  *
@@ -113,14 +114,15 @@ public class FrmCar extends javax.swing.JFrame {
                                     .addComponent(txtPlateNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cmbNumberOfPassengers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnSave)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(123, 123, 123)
+                                    .addComponent(btnShowData)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(btnShowData)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,11 +153,11 @@ public class FrmCar extends javax.swing.JFrame {
                     .addComponent(txtPlateNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSave)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnShowData)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -180,16 +182,64 @@ public class FrmCar extends javax.swing.JFrame {
         car = new Car(brand, ringSize, numberOfDoors, numberOfPassengers, plateNumber);
         carController.save(car);
         JOptionPane.showMessageDialog(rootPane, car.getName());
+//        emptyFields();
+//        btnShowDataActionPerformed(evt);       
 
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnShowDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowDataActionPerformed
-
+        
+//        String[] lines = new String[FileManager.countLines("cars")];
+//        CarController chickenController = new CarController();
+//        Car[] cars = new Car[FileManager.countLines("cars")];
+//
+//        CarController.read(lines, cars);
+//
+//        for (Car car : cars) {
+//            txtShowData.setText(txtShowData.getText() + "\n" + car.getName());
+//        }
+//
+//        CarController.populateCarsTable(tblCars, cars);
         CarController carController = new CarController();
-        txtShowData.setText(carController.readTxt("D:\\Universidad\\4to Semestre\\Tareas\\Fundamentos de la Programacion\\Code\\Code 2\\ESPE202011_FP_GEO-3285\\workshops\\Unit 3\\WS27 ADT\\ConcessionarySystem\\Cars.txt"));
+        txtShowData.setText(carController.readTxt("D:\\Universidad\\4to Semestre\\Tareas\\Fundamentos de la Programacion\\Code\\Code 2\\ESPE202011_FP_GEO-3285\\workshops\\Unit 3\\WS27 ADT\\ConcessionarySystem\\Cars.csv"));
         
     }//GEN-LAST:event_btnShowDataActionPerformed
 
+//    private void findCarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findChickenActionPerformed
+//
+//        String[] lines = new String[FileManager.countLines("cars")];
+//        CarController carController = new CarController();
+//        Car[] cars = new Car[FileManager.countLines("cars")];
+//        CarController.read(lines, cars);
+//        int index = carController.find(cars, txtBrand.getText());
+//        if (index == -1) {
+//            JOptionPane.showMessageDialog(rootPane, "NOT FOUND", "NOT FOUND", JOptionPane.ERROR_MESSAGE);
+//        } else {
+//            tblCars.setRowSelectionInterval(index, index);
+//        }
+//
+//    }//GEN-LAST:event_findChickenActionPerformed
+//    
+//    private void tblCarsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblChickensMouseClicked
+//        int column = 0;
+//        int row = tblCars.getSelectedRow();
+//        String brand = tblCars.getModel().getValueAt(row, column).toString();
+//        column=1;
+//        String ringSize = tblCars.getModel().getValueAt(row, column).toString();
+//        column=2;
+//        String numberOfDoors = tblCars.getModel().getValueAt(row, column).toString();
+//        column=3;
+//        String numberOfPassengers = tblCars.getModel().getValueAt(row, column).toString();
+//        column=4;
+//        String plateNumber = tblCars.getModel().getValueAt(row, column).toString();
+//        
+//        txtBrand.setText(brand);
+//        txtRingSize.setText(ringSize);
+//        cmbNumberOfDoors.setSelectedItem(numberOfDoors);
+//        cmbNumberOfPassengers.setSelectedItem(numberOfPassengers);
+//        txtPlateNumber.setText(plateNumber);
+//
+//    }//GEN-LAST:event_tblChickensMouseClicked 
     /**
      * @param args the command line arguments
      */
@@ -225,6 +275,15 @@ public class FrmCar extends javax.swing.JFrame {
             }
         });
     }
+    
+//    private void emptyFields() {
+//        txtBrand.setText("");
+//        txtRingSize.setText("");
+//        cmbNumberOfDoors.setSelectedItem("white");
+//        cmbNumberOfPassengers.setSelectedItem("false");
+//        txtPlateNumber.setText("");
+//
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;

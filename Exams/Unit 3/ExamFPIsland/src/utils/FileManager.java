@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -48,7 +47,7 @@ public class FileManager {
         return saved;
     }
     public static String read(String fileName){
-        return "WorkShop";
+        return "Exam";
     }
     
     public static int countLines(String fileName) {
@@ -93,4 +92,6 @@ public class FileManager {
             e.printStackTrace();
         }
     }
+
+    
 }
