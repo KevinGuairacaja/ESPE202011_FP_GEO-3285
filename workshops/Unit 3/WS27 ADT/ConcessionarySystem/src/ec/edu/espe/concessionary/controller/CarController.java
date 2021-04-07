@@ -69,10 +69,10 @@ public class CarController {
         try{ 
             BufferedReader bf = new BufferedReader(new FileReader(direction));
             String temp = "";
-            String line = "\n";
+            
             String bfRead;
             while((bfRead = bf.readLine()) != null){
-                temp = temp + bfRead + line;
+                temp = temp + bfRead + "\n";
             }
            text = temp;
             

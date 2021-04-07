@@ -114,11 +114,10 @@ public class FrmCar extends javax.swing.JFrame {
                                     .addComponent(txtPlateNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cmbNumberOfPassengers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnSave)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(123, 123, 123)
-                                    .addComponent(btnShowData)))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(123, 123, 123)
+                                .addComponent(btnShowData))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addComponent(jLabel1)))
@@ -220,7 +219,7 @@ public class FrmCar extends javax.swing.JFrame {
 //
 //    }//GEN-LAST:event_findChickenActionPerformed
 //    
-//    private void tblCarsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblChickensMouseClicked
+//    private void tblCarsMouseClicked(java.awt.event.MouseEvent evt) {                                         
 //        int column = 0;
 //        int row = tblCars.getSelectedRow();
 //        String brand = tblCars.getModel().getValueAt(row, column).toString();
@@ -239,7 +238,7 @@ public class FrmCar extends javax.swing.JFrame {
 //        cmbNumberOfPassengers.setSelectedItem(numberOfPassengers);
 //        txtPlateNumber.setText(plateNumber);
 //
-//    }//GEN-LAST:event_tblChickensMouseClicked 
+//    }                                         
     /**
      * @param args the command line arguments
      */

@@ -1,9 +1,10 @@
-Kia Rio R; PUB0908; 4; 5; 14.
-Nissan Sentra ; PAQ7356; 4; 5; 14.
-Chevrolet Spark GT; PMN2579; 5; 5; 12.
-Hyundai Tucson; PER9401; 5; 7; 16.
-Toyota Hilux; PTA3579; 4; 5; 16.
-BMW; TBA0145; 4; 5; 14.
-Honda Civic; POO7145; 4; 5; 14.
-Volkswagen Golf; PQR6587; 4; 5; 14.
-Renault Logan; PET7865; 4; 5; 14.
+Car;Plate;Doors;Capacity;Ring Size
+Kia Rio R; PUB0908;4;5; 14.
+Nissan Sentra ; PAQ7356;4;5; 14.
+Chevrolet Spark GT; PMN2579;5;5; 12.
+Hyundai Tucson; PER9401;5;7; 16.
+Toyota Hilux; PTA3579;4;5; 16.
+BMW; TBA0145;4;5; 14.
+Honda Civic; POO7145;4;5; 14.
+Volkswagen Golf; PQR6587;4;5; 14.
+Renault Logan; PET7865;4;5; 14.
